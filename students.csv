@@ -1,2 +1,4 @@
 SID,Name,DOB,Address,Phone,Email,Enrollment,Course,Attendance,GPA
-A001,Rohan Sharma,1990-01-01,G-1 Mansarover,9876789076,rohan@gmail.com,2015-01-01,BBA05,83,2.7
+1001,Rohan Sharma,1990-01-01,G-1 Mansarover,9876789076,rohan@gmail.com,2015-01-01,BBA05,83,2.7
+1002,Rachit Singh,2000-05-21,"Shipra Path, Mansarover",8769876425,rachit@gmail.com,2022-04-19,BCA,0,3.2
+1003,Nithin Kumar,2001-11-24,Malviya Nagar,9764267589,nithin@yahoo.com,2021-02-18,BBA,0,3.5
