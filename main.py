@@ -1,7 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import random
-import numpy as np
 from datetime import datetime
 user_data = pd.read_csv("users.csv")
 sdf = pd.read_csv("students.csv")
@@ -286,9 +284,9 @@ def course_seats(cdf):
     plt.show()
 
 def course_fees(cdf):
-    plt.bar(cdf["Name"], cdf["Fees"])
-    plt.xlabel("Name")
-    plt.ylabel("Fees")
+    plt.bar(cdf["CNAME"], cdf["Fees"])
+    plt.xlabel("Course Name")
+    plt.ylabel("Fees Per Annum")
     plt.title("Course Report")
     plt.show()
 
