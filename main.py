@@ -129,13 +129,26 @@ def delete_student(sdf):
 
 def search_student(sdf):
     print("Search Student Info")
-    sID = int(input("Enter student's ID: "))
-    student = sdf[sdf["SID"] == sID]
-    if student.empty:
-        print("Student not found")
-        return
-    print("Student found")
-    print(student)
+    option=int(input("1. Search by Name\n2. Search by ID\nEnter your choice (1-2): "))
+    if option == 1:
+        name = input("Enter student's name: ")
+        student = sdf[sdf["Name"] == name]
+        if student.empty:
+            print("Student not found")
+            return
+        print("Student found")
+        print(student)
+    elif option == 2:
+
+        sID = int(input("Enter student's ID: "))
+        student = sdf[sdf["SID"] == sID]
+        if student.empty:
+            print("Student not found")
+            return
+        print("Student found")
+        print(student)
+    else:
+        print("Invalid choice. Please try again.")
 
 def student_report(sdf):
     choice=int(input("Student reports available:\n1. Attendance\n2. GPA\nEnter your choice (1-2): "))
@@ -233,13 +246,28 @@ def delete_course(cdf):
 
 def search_course(cdf):
     print("Search Course Info")
-    cid = int(input("Enter course ID: "))
-    course = cdf[cdf["CID"] == cid]
-    if course.empty:
-        print("Course not found")
-        return
-    print("Course found")
-    print(course)
+    option=int(input("1. Search by Course Name\n2. Search by Course ID\nEnter your choice (1-2): "))
+
+    if option == 1:
+        name = input("Enter course name: ")
+        course = cdf[cdf["CNAME"] == name]
+        if course.empty:
+            print("Course not found")
+            return
+        print("Course found")
+        print(course)
+    elif option == 2:
+        
+        cid = int(input("Enter course ID: "))
+        course = cdf[cdf["CID"] == cid]
+        if course.empty:
+            print("Course not found")
+            return
+        print("Course found")
+        print(course)
+
+    else:
+        print("Invalid choice. Please try again.")
 
 def course_report(cdf):
     choice=int(input("Course reports available:\n1. Seats\n2. Fees\nEnter your choice (1-2): "))
@@ -339,13 +367,25 @@ def delete_faculty(fdf):
 
 def search_faculty(fdf):
     print("Search Faculty Info")
-    fid = int(input("Enter faculty ID: "))
-    faculty = fdf[fdf["FID"] == fid]
-    if faculty.empty:
-        print("Faculty not found")
-        return
-    print("Faculty found")
-    print(faculty)
+    option=int(input("1. Search by Faculty Name\n2. Search by Faculty ID\nEnter your choice (1-2): "))
+    if option == 1:
+        name = input("Enter faculty name: ")
+        faculty = fdf[fdf["Name"] == name]
+        if faculty.empty:
+            print("Faculty not found")
+            return
+        print("Faculty found")
+        print(faculty)
+    elif option == 2:
+        fid = int(input("Enter faculty ID: "))
+        faculty = fdf[fdf["EID"] == fid]
+        if faculty.empty:
+            print("Faculty not found")
+            return
+        print("Faculty found")
+        print(faculty)
+    else:
+        print("Invalid choice. Please try again.")
 
 
 
